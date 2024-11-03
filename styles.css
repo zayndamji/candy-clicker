@@ -130,9 +130,18 @@ img#candy {
   height: calc(100%/3);
   font-family: Roboto, sans-serif;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.button-valid {
   border: white solid 0.1vw;
   color: white;
-  cursor: pointer;
+}
+
+.button-invalid {
+  border: gray solid 0.1vw;
+  color: gray;
+  cursor: default;
 }
 
 #reset {

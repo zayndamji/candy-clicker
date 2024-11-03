@@ -27,6 +27,45 @@ function refreshDisplays() {
   for (let i = 0; i < upgrades.length; i++) {
     document.getElementById('price' + i).textContent = upgrades[i].price;
     document.getElementById('quantity' + i).textContent = upgrades[i].quantity;
+
+    let maxQuantityPurchasable = 0;
+    while (true) {
+      if (Math.floor(upgrades[i].price * Math.pow(1.2, maxQuantityPurchasable)) <= candyScore) {
+        maxQuantityPurchasable += 1;
+      } else {
+        break;
+      }
+    }
+
+    console.log(maxQuantityPurchasable);
+
+    if (maxQuantityPurchasable < 1) {
+      document.getElementById('buy1button' + i).disabled = true;
+      document.getElementById('buy1button' + i).classList.add('button-invalid');
+      document.getElementById('buy1button' + i).classList.remove('button-valid');
+
+      document.getElementById('buymaxbutton' + i).disabled = true;
+      document.getElementById('buymaxbutton' + i).classList.add('button-invalid');
+      document.getElementById('buymaxbutton' + i).classList.remove('button-valid');
+    } else {
+      document.getElementById('buy1button' + i).disabled = false;
+      document.getElementById('buy1button' + i).classList.remove('button-invalid');
+      document.getElementById('buy1button' + i).classList.add('button-valid');
+
+      document.getElementById('buymaxbutton' + i).disabled = false;
+      document.getElementById('buymaxbutton' + i).classList.remove('button-invalid');
+      document.getElementById('buymaxbutton' + i).classList.add('button-valid');
+    }
+
+    if (maxQuantityPurchasable < 10) {
+      document.getElementById('buy10button' + i).disabled = true;
+      document.getElementById('buy10button' + i).classList.add('button-invalid');
+      document.getElementById('buy10button' + i).classList.remove('button-valid');
+    } else {
+      document.getElementById('buy10button' + i).disabled = false;
+      document.getElementById('buy10button' + i).classList.remove('button-invalid');
+      document.getElementById('buy10button' + i).classList.add('button-valid');
+    }
   }
 }
 
