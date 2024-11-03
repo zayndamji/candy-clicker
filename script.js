@@ -39,7 +39,7 @@ function addUpgrade(index, quantityRequested) {
 
     upgrades[index].quantity += 1;
     candyScore -= upgrades[index].price;
-    upgrades[index].price = Math.floor(upgrades[index].price * 1.5);
+    upgrades[index].price = Math.floor(upgrades[index].price * 1.2);
   }
 
   refreshDisplays();
