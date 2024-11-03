@@ -10,20 +10,16 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
 
 let candyScore = localStorage.getItem('candyScore') ? parseInt(localStorage.getItem('candyScore')) : 0;
 
-const candy = document.getElementById('candy');
-const score = document.getElementById('candyScore');
-const cps = document.getElementById('candyPerSecond');
-
 refreshDisplays();
 
-candy.addEventListener('click', () => {
+document.getElementById('candy').addEventListener('click', () => {
   candyScore++;
   refreshDisplays();
 });
 
 function refreshDisplays() {
-  score.textContent = candyScore;
-  cps.textContent = getCandiesPerSecond();
+  document.getElementById('candyScore').textContent = candyScore;
+  document.getElementById('candyPerSecond').textContent = getCandiesPerSecond();
   
   localStorage.setItem('candyScore', candyScore);
   localStorage.setItem('upgrades', JSON.stringify(upgrades));
