@@ -5,6 +5,7 @@ body {
   padding: 0px;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  background-color: #141414;
 }
 
 img#candy {
@@ -44,6 +45,7 @@ img#candy {
 }
 
 #score {
+  color: white;
   font-size: inherit;
   font-weight: bold;
   cursor: pointer;
