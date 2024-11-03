@@ -1,6 +1,7 @@
 const upgrades = [
   {
     name: "Child",
+    originalPrice: 10,
     price: 10,
     quantity: 0,
     cps: 1
@@ -43,3 +44,13 @@ setInterval(() => {
   candyScore += candiesPerSecond;
   refreshDisplays();
 }, 1000);
+
+document.getElementById('reset').addEventListener('click', () => {
+  candyScore = 0;
+  candiesPerSecond = 0;
+  for (let i = 0; i < upgrades.length; i++) {
+    upgrades[i].price = upgrades[i].originalPrice;
+    upgrades[i].quantity = 0;
+  }
+  refreshDisplays();
+});
