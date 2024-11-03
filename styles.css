@@ -39,17 +39,37 @@ img#candy {
   top: 0;
   left: 0;
   width: 256px;
-  height: 4vw;
+  height: 6vw;
   text-align: left;
   margin: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 #score {
-  font-weight: bold;
   cursor: default;
   user-select: none;
+  line-height: 2vw;
+  font-size: 2vw;
+}
+
+#candyScore {
+  font-weight: bold;
   line-height: 4vw;
   font-size: 4vw;
+}
+
+#cps {
+  cursor: default;
+  user-select: none;
+  line-height: 1.5vw;
+  font-size: 1.5vw;
+}
+
+#candyPerSecond {
+  font-weight: bold;
 }
 
 #upgradesParent {
