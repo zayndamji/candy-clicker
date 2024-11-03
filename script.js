@@ -27,6 +27,7 @@ function refreshDisplays() {
 
   for (let i = 0; i < upgrades.length; i++) {
     document.getElementById('price' + i).textContent = upgrades[i].price;
+    document.getElementById('quantity' + i).textContent = upgrades[i].quantity;
   }
 }
 

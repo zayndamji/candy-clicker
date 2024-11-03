@@ -80,7 +80,7 @@ img#candy {
 }
 
 .title {
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 
 .description {
@@ -90,6 +90,10 @@ img#candy {
 .price {
   font-size: 1vw;
   font-weight: bold;
+}
+
+.quantity {
+  font-size: 1vw;
 }
 
 .buttons {
