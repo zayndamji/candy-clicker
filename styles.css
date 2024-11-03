@@ -20,7 +20,7 @@ img#candy {
   width: 15vw;
 }
 
-.zoom:hover {
+.zoom:active {
   height: 20vw;
   width: 20vw;
   font-size: calc((40/35) * 10);
