@@ -36,12 +36,12 @@ img#candy {
 
 #scoreParent {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 64px;
+  top: 0;
+  left: 0;
+  width: 256px;
   height: 64px;
-  text-align: right;
-  margin-right: 12px;
+  text-align: left;
+  margin-left: 12px;
 }
 
 #score {
@@ -51,4 +51,13 @@ img#candy {
   cursor: pointer;
   line-height: 64px;
   font-size: 48px;
+}
+
+#upgradesParent {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 25vw;
+  background-color: black;
 }
