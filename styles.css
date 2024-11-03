@@ -15,14 +15,13 @@ img#candy {
 }
 
 .zoom {
-  height: 35vh;
-  width: 35vh;
-  font-size: 10vh;
+  height: 15vw;
+  width: 15vw;
 }
 
 .zoom:hover {
-  height: 40vh;
-  width: 40vh;
+  height: 20vw;
+  width: 20vw;
   font-size: calc((40/35) * 10);
 }
 
@@ -39,25 +38,30 @@ img#candy {
   top: 0;
   left: 0;
   width: 256px;
-  height: 64px;
+  height: 4vw;
   text-align: left;
-  margin-left: 12px;
+  margin: 12px;
 }
 
 #score {
   color: white;
-  font-size: inherit;
   font-weight: bold;
   cursor: pointer;
-  line-height: 64px;
-  font-size: 48px;
+  line-height: 4vw;
+  font-size: 4vw;
 }
 
 #upgradesParent {
   position: fixed;
-  right: 0;
+  right: 2px;
   top: 0;
   height: 100%;
   width: 25vw;
   background-color: black;
+}
+
+.upgrade {
+  width: 100%;
+  height: 10vw;
+  border: white 1px solid;
 }
