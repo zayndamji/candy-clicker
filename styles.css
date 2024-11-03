@@ -83,7 +83,7 @@ img#candy {
 
 .upgrade {
   width: 100%;
-  height: 10vw;
+  height: 12vw;
   border: white 0.1vw solid;
   display: flex;
   align-items: top;
@@ -100,7 +100,7 @@ img#candy {
 }
 
 .title {
-  font-size: 1.7vw;
+  font-size: 1.6vw;
 }
 
 .description {
