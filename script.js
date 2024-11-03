@@ -8,8 +8,8 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
   },
   {
     name: "Parent",
-    originalPrice: 500,
-    price: 500,
+    originalPrice: 250,
+    price: 250,
     quantity: 0,
     cps: 5
   }
