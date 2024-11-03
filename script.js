@@ -5,6 +5,13 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
     price: 10,
     quantity: 0,
     cps: 1
+  },
+  {
+    name: "Parent",
+    originalPrice: 500,
+    price: 500,
+    quantity: 0,
+    cps: 5
   }
 ]
 
@@ -89,14 +96,8 @@ setInterval(() => {
 }, 1000);
 
 document.getElementById('reset').addEventListener('click', () => {
-  candyScore = 0;
-
-  for (let i = 0; i < upgrades.length; i++) {
-    upgrades[i].price = upgrades[i].originalPrice;
-    upgrades[i].quantity = 0;
-  }
-
-  refreshDisplays();
+  localStorage.clear();
+  location.reload(true);
 });
 
 function getCandiesPerSecond() {
