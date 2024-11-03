@@ -9,7 +9,6 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
 ]
 
 let candyScore = localStorage.getItem('candyScore') ? parseInt(localStorage.getItem('candyScore')) : 0;
-let candiesPerSecond = localStorage.getItem('candiesPerSecond') ? parseInt(localStorage.getItem('candiesPerSecond')) : 0;
 
 const candy = document.getElementById('candy');
 const score = document.getElementById('score');
@@ -24,7 +23,6 @@ candy.addEventListener('click', () => {
 function refreshDisplays() {
   score.innerHTML = candyScore;
   localStorage.setItem('candyScore', candyScore);
-  localStorage.setItem('candiesPerSecond', candiesPerSecond);
   localStorage.setItem('upgrades', JSON.stringify(upgrades));
 
   for (let i = 0; i < upgrades.length; i++) {
@@ -38,23 +36,21 @@ function addUpgrade(index, quantityRequested) {
   for (let i = 0; i < quantityRequested; i++) {
     if (candyScore < upgrades[index].price) break;
 
-    candiesPerSecond += upgrades[index].cps;
     upgrades[index].quantity += 1;
     candyScore -= upgrades[index].price;
-    upgrades[index].price = Math.round(upgrades[index].price * 1.5);
+    upgrades[index].price = Math.floor(upgrades[index].price * 1.5);
   }
 
   refreshDisplays();
 }
 
 setInterval(() => {
-  candyScore += candiesPerSecond;
+  candyScore += getCandiesPerSecond();
   refreshDisplays();
 }, 1000);
 
 document.getElementById('reset').addEventListener('click', () => {
   candyScore = 0;
-  candiesPerSecond = 0;
 
   for (let i = 0; i < upgrades.length; i++) {
     upgrades[i].price = upgrades[i].originalPrice;
@@ -63,3 +59,11 @@ document.getElementById('reset').addEventListener('click', () => {
 
   refreshDisplays();
 });
+
+function getCandiesPerSecond() {
+  let cps = 0;
+  for (const upgrade of upgrades) {
+    cps += upgrade.quantity * upgrade.cps;
+  }
+  return cps;
+}
