@@ -1,3 +1,8 @@
+document.getElementById('reset').addEventListener('click', () => {
+  localStorage.clear();
+  location.reload(true);
+});
+
 const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getItem('upgrades')) : [
   {
     name: "Child",
@@ -159,11 +164,6 @@ setInterval(() => {
   candyScore += getCandiesPerSecond();
   refreshDisplays();
 }, 1000);
-
-document.getElementById('reset').addEventListener('click', () => {
-  localStorage.clear();
-  location.reload(true);
-});
 
 function getCandiesPerSecond() {
   let cps = 0;
