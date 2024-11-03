@@ -11,30 +11,35 @@ let candyScore = parseInt(localStorage.getItem('candyScore')) || 0;
 let scorePerSecond = parseInt(localStorage.getItem('scorePerSecond')) || 0;
 const candy = document.getElementById('candy');
 const score = document.getElementById('score');
-setScore();
+refreshDisplays();
 
 candy.addEventListener('click', () => {
   candyScore++;
-  setScore();
+  refreshDisplays();
 });
 
-function setScore() {
+function refreshDisplays() {
   score.innerHTML = candyScore;
   localStorage.setItem('candyScore', candyScore);
   localStorage.setItem('scorePerSecond', scorePerSecond);
 }
 
 function addUpgrade(index, quantityRequested) {
-  const { price, quantity, sps } = upgrades[index];
+  if (quantityRequested == undefined) quantityRequested = Infinity;
 
-  if (price * quantityRequested > candyScore) return;
+  for (let i = 0; i < quantityRequested; i++) {
+    if (candyScore < upgrades[index].price) break;
 
-  scorePerSecond += quantityRequested * sps;
-  candyScore -= price * quantityRequested;
-  setScore();
+    scorePerSecond += upgrades[index].sps;
+    upgrades[index].quantity += 1;
+    candyScore -= upgrades[index].price;
+    upgrades[index].price = Math.round(upgrades[index].price * 1.5);
+  }
+
+  refreshDisplays();
 }
 
 setInterval(() => {
   candyScore += scorePerSecond;
-  setScore();
+  refreshDisplays();
 }, 1000);
