@@ -18,8 +18,8 @@ document.getElementById('candy').addEventListener('click', () => {
 });
 
 function refreshDisplays() {
-  document.getElementById('candyScore').textContent = candyScore;
-  document.getElementById('candyPerSecond').textContent = getCandiesPerSecond();
+  document.getElementById('score').textContent = candyScore;
+  document.getElementById('cps').textContent = getCandiesPerSecond();
   
   localStorage.setItem('candyScore', candyScore);
   localStorage.setItem('upgrades', JSON.stringify(upgrades));

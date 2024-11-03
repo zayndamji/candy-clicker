@@ -34,7 +34,7 @@ img#candy {
   margin: 0px;
 }
 
-#scoreParent {
+#displayParent {
   position: fixed;
   top: 0;
   left: 0;
@@ -48,27 +48,27 @@ img#candy {
   align-items: flex-start;
 }
 
-#score {
+#scoreParent {
   cursor: default;
   user-select: none;
   line-height: 2vw;
   font-size: 2vw;
 }
 
-#candyScore {
+#score {
   font-weight: bold;
   line-height: 4vw;
   font-size: 4vw;
 }
 
-#cps {
+#cpsParent {
   cursor: default;
   user-select: none;
   line-height: 1.5vw;
   font-size: 1.5vw;
 }
 
-#candyPerSecond {
+#cps {
   font-weight: bold;
 }
 
