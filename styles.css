@@ -5,7 +5,10 @@ body {
   padding: 0px;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  background-image: url("halloween.png");
   background-color: #141414;
+  background-position: center;
+  background-size: cover;
   color: white;
 }
 
