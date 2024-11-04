@@ -6,3 +6,7 @@ Then, you can buy upgrades, which increase in price as quantity increases.
 Each upgrade will give you a certain number of candies per second (CPS).
 
 ### View website at https://zayndamji.github.io/candy-clicker/
+
+# Screenshot Demo
+
+<img src="screenshot.png">
