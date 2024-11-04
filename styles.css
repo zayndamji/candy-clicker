@@ -79,6 +79,8 @@ img#candy {
   height: 100%;
   width: 25vw;
   background-color: black;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .upgrade {

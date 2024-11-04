@@ -6,7 +6,8 @@ document.getElementById('reset').addEventListener('click', () => {
 const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getItem('upgrades')) : [
   {
     name: "Child",
-    description: "A child will run from house to house, gathering 1 candy per second.",
+    pluralName: "Children",
+    description: "A child will run from house to house to get you candy.",
     originalPrice: 10,
     price: 10,
     quantity: 0,
@@ -14,11 +15,57 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
   },
   {
     name: "Parent",
-    description: "A parent will buy you candy when you ask, gathering 5 candy per second.",
+    pluralName: "Parents",
+    description: "A parent will go the store and buy you as much candy as you want.",
     originalPrice: 250,
     price: 250,
     quantity: 0,
     cps: 5
+  },
+  {
+    name: "Class",
+    pluralName: "Classes",
+    description: "All the children in your classroom will give you candy.",
+    originalPrice: 6250,
+    price: 6250,
+    quantity: 0,
+    cps: 25
+  },
+  {
+    name: "School",
+    pluralName: "Schools",
+    description: "The children, parents, and teachers of the school will gather candy for you.",
+    originalPrice: 6250,
+    price: 6250,
+    quantity: 0,
+    cps: 125
+  },
+  {
+    name: "State",
+    pluralName: "States",
+    description: "The entire state will sell its bonds to give you candy.",
+    originalPrice: 156250,
+    price: 156250,
+    quantity: 0,
+    cps: 600
+  },
+  {
+    name: "Country",
+    pluralName: "Countries",
+    description: "The government will increase the national debt to give you candy.",
+    originalPrice: 3906250,
+    price: 3906250,
+    quantity: 0,
+    cps: 3000
+  },
+  {
+    name: "World",
+    pluralName: "Worlds",
+    description: "The government will increase the national debt to give you candy.",
+    originalPrice: 97656250,
+    price: 97656250,
+    quantity: 0,
+    cps: 15000
   }
 ]
 
@@ -58,7 +105,7 @@ function generateUpgrades() {
     quantity.classList.add('quantity');
     const quantityChild = document.createElement('span');
     quantityChild.id = 'quantity' + i;
-    quantity.append('Quantity Owned: ', quantityChild, ' Parents');
+    quantity.append('Quantity Owned: ', quantityChild, ' ' + upgrades[i].pluralName);
 
     contents.append(title, document.createElement('div'), description, document.createElement('div'), price, quantity);
 
