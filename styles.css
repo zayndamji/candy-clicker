@@ -51,6 +51,35 @@ img#candy {
   align-items: flex-start;
 }
 
+#pageTitleParent {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  height: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#pageTitle {
+  width: 30vw;
+  margin: auto;
+  cursor: default;
+  user-select: none;
+  line-height: 5vw;
+  font-size: 3vw;
+  background-color: rgba(0, 0, 0, 0.514);
+  border-radius: 1vw;
+}
+
+#pageAuthor {
+  cursor: default;
+  user-select: none;
+  line-height: 1.5vw;
+  font-size: 1.5vw;
+}
+
 #scoreParent {
   cursor: default;
   user-select: none;
