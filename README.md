@@ -10,14 +10,14 @@ Each upgrade will give you a certain number of candies per second (CPS).
 # How to Play
 
 1. Click the peppermint in the center of the screen to get "Candies". Candies are the score of this game.  <br><br>
-<img src="resources/peppermint.png" style="width: 20%; border-radius: 16px;"><br><br>
+<img src="https://raw.githubusercontent.com/zayndamji/candy-clicker/refs/heads/main/resources/peppermint.png" style="width: 20%; border-radius: 16px;"><br><br>
 
 2. Buy different upgrades as you get more candy. These upgrades will generate a certain number of CPS (Candies Per Second). The price of each upgrade will increase as you buy more. <br><br>
-<img src="resources/upgrades.png" style="width: 20%; border-radius: 4px;"><br><br>
+<img src="https://raw.githubusercontent.com/zayndamji/candy-clicker/refs/heads/main/resources/upgrades.png" style="width: 20%; border-radius: 4px;"><br><br>
 
 3. Try to get **5 MILLION** candies! <br><br>
-<img src="resources/highscore.png" style="width: 30%; border-radius: 16px;"><br><br>
+<img src="https://raw.githubusercontent.com/zayndamji/candy-clicker/refs/heads/main/resources/highscore.png" style="width: 30%; border-radius: 16px;"><br><br>
 
 # Screenshot Demo
 
-<img src="resources/screenshot.png">
+<img src="https://raw.githubusercontent.com/zayndamji/candy-clicker/refs/heads/main/resources/screenshot.png">
