@@ -17,8 +17,8 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
     name: "Parent",
     pluralName: "Parents",
     description: "A parent will go the store and buy you as much candy as you want.",
-    originalPrice: 250,
-    price: 250,
+    originalPrice: 200,
+    price: 200,
     quantity: 0,
     cps: 5
   },
@@ -26,46 +26,46 @@ const upgrades = localStorage.getItem('upgrades') ? JSON.parse(localStorage.getI
     name: "Class",
     pluralName: "Classes",
     description: "All the children in your classroom will give you candy.",
-    originalPrice: 6250,
-    price: 6250,
+    originalPrice: 4000,
+    price: 4000,
     quantity: 0,
-    cps: 25
+    cps: 40
   },
   {
     name: "School",
     pluralName: "Schools",
     description: "The children, parents, and teachers of the school will gather candy for you.",
-    originalPrice: 6250,
-    price: 6250,
+    originalPrice: 10000,
+    price: 10000,
     quantity: 0,
-    cps: 125
+    cps: 150
   },
   {
     name: "State",
     pluralName: "States",
     description: "The entire state will sell its bonds to give you candy.",
-    originalPrice: 156250,
-    price: 156250,
+    originalPrice: 50000,
+    price: 50000,
     quantity: 0,
-    cps: 600
+    cps: 500
   },
   {
     name: "Country",
     pluralName: "Countries",
     description: "The government will increase the national debt to give you candy.",
-    originalPrice: 3906250,
-    price: 3906250,
+    originalPrice: 300000,
+    price: 300000,
     quantity: 0,
-    cps: 3000
+    cps: 2000
   },
   {
     name: "World",
     pluralName: "Worlds",
     description: "The government will increase the national debt to give you candy.",
-    originalPrice: 97656250,
-    price: 97656250,
+    originalPrice: 1000000,
+    price: 1000000,
     quantity: 0,
-    cps: 15000
+    cps: 8000
   }
 ]
 
